@@ -22,18 +22,18 @@ int main()
 	int Hut = 0;
 	int DisguisedFace = 0;
 	
-	for(int i = 0; i < r; i++) //for loop to fill the string with red circles for the prise board
+	for(int i = 0; i < r; i++) //for loop to fill the string with red circles for the prize board
 	{
 		for(int j = 0; j < c; j++)
 		{
-			array[i][j] = "⭕"; 
+			array[i][j] = " ⭕ "; 
 		}
 	}
 	for(int i = 0; i < r; i++) //for loop to fill the string with red circles for the coin board 
 	{
 		for(int j = 0; j < c; j++)
 		{
-			array1[i][j] = "⭕"; 
+			array1[i][j] = " ⭕ "; 
 		}
 	}
 	
@@ -43,15 +43,15 @@ int main()
 	
 	for(int i = 0; i < 3; i++) //a loop that places a prize on the board repeats 3 times 
 	{	
-		row = rand()%5; //variables to make the random cordinantes to place the prizes 
+		row = rand()%5; //variables to make the random coordinates to place the prizes 
 		col = rand()%5;
-		if(array[row][col] == "⭕")
-		{ 							//if the random place is a red circle it will put the price there
-			array[row][col] = "🦧";
+		if(array[row][col] == " ⭕ ")
+		{ 							//if the random place is a red circle, it will put the price there
+			array[row][col] = " 🦧 ";
 			}
 				else
 			{
-			i--; //if the cicle has a prize on it the loop repeats
+			i--; //if the circle has a prize on it, the loop repeats
 		}
 		
 	}
@@ -60,13 +60,13 @@ int main()
 	{	
 		row = rand()%5;
 		col = rand()%5;
-		if(array[row][col] == "⭕")
-		{ //if the random place is a red circle it will put the price there
+		if(array[row][col] == " ⭕ ")
+		{ //if the random place is a red circle, it put the price there
 			array[row][col] = "🦍";
 			}
 				else
 			{
-			i--;//if the cicle has a prize on it the loop repeats
+			i--;//if the circle has a prize on it, the loop repeats
 		}
 		
 	}
@@ -75,13 +75,13 @@ int main()
 	{	
 		row = rand()%5;
 		col = rand()%5;
-		if(array[row][col] == "⭕")
-		{//if the random place is a red circle it will put the price there
-			array[row][col] = "🐒";
+		if(array[row][col] == " ⭕ ")
+		{//if the random place is a red circle, it will put the price there
+			array[row][col] = " 🐒 ";
 			}
 				else
 			{
-			i--; //if the cicle has a prize on it the loop repeats
+			i--; //if the circle has a prize on it, the loop repeats
 		}
 		
 	}
@@ -90,13 +90,13 @@ int main()
 	{	
 		row = rand()%5;
 		col = rand()%5;
-		if(array[row][col] == "⭕")
-		{//if the random place is a red circle it will put the price there
-			array[row][col] = "🛖";
+		if(array[row][col] == " ⭕ ")
+		{//if the random place is a red circle, it will put the price there
+			array[row][col] = " 🛖 ";
 			}
 				else
 			{
-			i--; //if the cicle has a prize on it the loop repeats
+			i--; //if the circle has a prize on i,t the loop repeats
 		}
 		
 	}
@@ -105,46 +105,46 @@ int main()
 	{	
 		row = rand()%5;
 		col = rand()%5;
-		if(array[row][col] == "⭕")
-		{ //if the random place is a red circle it will put the price there
-			array[row][col] = "🥸";
+		if(array[row][col] == " ⭕ ")
+		{ //if the random place is a red circle, it will put the price there
+			array[row][col] = " 🥸 ";
 			}
 				else
 			{
-			i--; //if the cicle has a prize on it the loop repeats
+			i--; //if the circle has a prize on it the loop repeats
 		}
 		
 	}
 	
-	for(int i = 0; i < 10; i++) //tosses 10 pennys onto the board 5 random on the columns and 5 random of the rows allowing you to hit the same prize more than once 
+	for(int i = 0; i < 10; i++) //tosses 10 pennies onto the board, 5 random on the columns and five random of the rows, allowing you to hit the same prize more than once 
 	{
 		row = rand()%5;
 		col = rand()%5;
 		
-		array1[row][col] = "🪙"; // fill the second array with coins 
+		array1[row][col] = " 🪙 "; // fill the second array with coins 
 	}
 	
 	for(int i = 0; i < r; i++)
 	{
 		for(int j = 0; j < c; j++)
 		{
-			if((array[i][j] == "🦧") && array1[i][j] == "🪙") //if a penny is and a prize on the same circle then it counts towards 1 of 3 of those prizes 
+			if((array[i][j] == " 🦧 ") && array1[i][j] == " 🪙 ") //if a penny is and a prize on the same circle then it counts towards 1 of 3 of those prizes 
 			{
 				Orangutan = Orangutan + 1;
 			}
-			if(array[i][j] == "🦍" && array1[i][j] == "🪙")
+			if(array[i][j] == " 🦍 " && array1[i][j] == " 🪙 ")
 			{
 				Gorilla = Gorilla + 1;
 			}
-			if(array[i][j] == "🐒" && array1[i][j] == "🪙")
+			if(array[i][j] == " 🐒 " && array1[i][j] == " 🪙 ")
 			{
 				Monkey = Monkey +1;
 			}
-			if(array[i][j] == "🛖" && array1[i][j] == "🪙")
+			if(array[i][j] == " 🛖 " && array1[i][j] == " 🪙 ")
 			{
 				Hut = Hut +1;
 			}
-			if(array[i][j] == "🥸" && array1[i][j] == "🪙")
+			if(array[i][j] == " 🥸 " && array1[i][j] == " 🪙 ")
 			{
 				DisguisedFace = DisguisedFace +1;
 			}
@@ -172,7 +172,7 @@ int main()
 		}
 		cout << endl;
 	}
-	//if you toss a penny on all three prizes you get them 
+	//if you toss a penny on all three prizes, you get them 
 	if(Orangutan == 3)
 	{
 		cout << "You covered 3 of the Orangutan! You get a pet Orangutan!" << endl; 
@@ -204,8 +204,5 @@ int main()
 	}
 		
 	
-		
-		
-//you like the shirt? if not I can replace it with the black one with the galaxy burger 
 return 0;
 }
